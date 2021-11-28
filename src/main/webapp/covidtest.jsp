@@ -15,7 +15,7 @@
 <tr><td>Aadhaar Number: </td><td><input type="text" name="aadhaar"></td></tr>
 <tr><td>Mob: </td><td><input type="text" name="phone"></td></tr>
 <tr><td>VaccineType: </td><td><input type="text" name="vaccine"></td></tr>
-<tr><td>Dose Number: </td><td><input type="text" name="dose"></td></tr>
+<tr><td>VaccineDose: </td><td><input type="text" name="dose"> </td></tr>
 <tr><td></td><td><input type="submit" value="register"></td></tr>
 </table>
 </form>
