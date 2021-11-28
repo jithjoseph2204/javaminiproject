@@ -37,8 +37,8 @@ public class regrd {
 	{
 		loadDriver(dbDriver);
 		Connection conn = getConnection();
-		String result = "Data entered successfully";
-		String sql = "insert into mmr values(?,?,?,?,?)";
+		String result = "Data entered successfully!!!\nGet Vaccinated and Be Safe";
+		String sql = "insert into mmr values(?,?,?,?,?,?)";
 		
 		PreparedStatement ps;
 		try {
@@ -48,11 +48,12 @@ public class regrd {
 		ps.setString(3, mmr.getPhone());
 		ps.setString(4, mmr.getVaccine());
 		ps.setString(5, mmr.getDose());
+		ps.setString(6, mmr.getVaccinedate());
 		ps.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			result = "Data not entered";
+			result = "Full Data Fields Not Entered or Not Entered Correctly\nor\nYou may have registered before same aadhaar number";
 		}
 		return result;
 	}

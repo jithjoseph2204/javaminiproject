@@ -1,28 +1,29 @@
 
 public class member{
 	
-	private String Fullname,aadhaar,phone,vaccine,dose;
+	private String aadhaar,fullname,phone,vaccine,dose,vaccinedate;
 
 	
 	public member() {
 		super();
 	}
 
-	public member(String name, String aadhaar, String phone, String vaccine, String dose) {
+	public member(String fullname, String aadhaar, String phone, String vaccine, String dose , String vaccinedate) {
 		super();
-		this.Fullname = name;
 		this.aadhaar = aadhaar;
+		this.fullname = fullname;
 		this.phone = phone;
 		this.vaccine = vaccine;
 		this.dose = dose;
+	    this.vaccinedate=vaccinedate;
 	}
 
 	public String getName() {
-		return Fullname;
+		return fullname;
 	}
 
-	public void setName(String name) {
-		this.Fullname = name;
+	public void setName(String fullname) {
+		this.fullname = fullname;
 	}
 
 	public String getAadhaar() {
@@ -56,6 +57,16 @@ public class member{
 	public void setDose(String dose) {
 		this.dose = dose;
 	}
+
+	public String getVaccinedate() {
+		return vaccinedate;
+	}
+
+	public void setVaccinedate(String vaccinedate) {
+		this.vaccinedate = vaccinedate;
+	}
+	
+	
 	
 }
 

@@ -34,13 +34,14 @@ public class covidregr extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String Fullname = request.getParameter("Fullname");
 		String aadhaar = request.getParameter("aadhaar");
+		String fullname = request.getParameter("fullname");
 		String phone = request.getParameter("phone");
 		String vaccine = request.getParameter("vaccine");
 		String dose = request.getParameter("dose");
+		String vaccinedate = request.getParameter("vaccinedate");
     
-	    member mmr = new member(Fullname,aadhaar,phone,vaccine,dose);
+	    member mmr = new member(aadhaar,fullname,phone,vaccine,dose,vaccinedate);
 	    regrd d = new regrd();
 	    String result = d.insert(mmr);
 	    response.getWriter().print(result);
